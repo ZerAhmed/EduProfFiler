@@ -11,7 +11,7 @@ namespace EduProfFiler
             // To customize application configuration such as set high DPI settings or default font,
             // see https://aka.ms/applicationconfiguration.
             ApplicationConfiguration.Initialize();
-            Application.Run(new Views.frm_Main());
+            Application.Run(new Views.Forms.frm_Main());
         }
     }
 }
