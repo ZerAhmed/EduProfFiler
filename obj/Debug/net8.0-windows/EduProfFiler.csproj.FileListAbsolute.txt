@@ -159,3 +159,4 @@ C:\Users\ahmed\Desktop\EduProfFiler\obj\Debug\net8.0-windows\EduProfFiler.Views.
 C:\Users\ahmed\Desktop\EduProfFiler\obj\Debug\net8.0-windows\EduProfFiler.Views.Forms.frm_UnitsAndSubjectsSet.resources
 C:\Users\ahmed\Desktop\EduProfFiler\obj\Debug\net8.0-windows\EduProfFiler.Views.Forms.frm_SchoolYearSet.resources
 C:\Users\ahmed\Desktop\EduProfFiler\obj\Debug\net8.0-windows\EduProfFiler.Views.Forms.frm_ContinuousAssessmentSet.resources
+C:\Users\ahmed\Desktop\EduProfFiler\bin\Debug\net8.0-windows\EduProfFiler.dll.config

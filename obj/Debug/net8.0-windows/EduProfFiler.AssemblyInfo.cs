@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("EduProfFiler")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+a0a6e38446b67acda9e6b5d729661272b9a488d3")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+a76f079b7bcba3c8f924f93fe247182d5233fa85")]
 [assembly: System.Reflection.AssemblyProductAttribute("EduProfFiler")]
 [assembly: System.Reflection.AssemblyTitleAttribute("EduProfFiler")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

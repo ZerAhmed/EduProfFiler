@@ -41,9 +41,9 @@
             btn_Next = new DevExpress.XtraEditors.SimpleButton();
             btn_Last = new DevExpress.XtraEditors.SimpleButton();
             groupBox1 = new GroupBox();
-            txt_ClName = new TextBox();
+            txt_SYNotes = new TextBox();
             label2 = new Label();
-            txt_ClCode = new TextBox();
+            txt_SYCode = new TextBox();
             label1 = new Label();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             groupBox3.SuspendLayout();
@@ -110,6 +110,7 @@
             btn_Add.Size = new Size(74, 35);
             btn_Add.TabIndex = 1;
             btn_Add.Text = "إضافة";
+            btn_Add.Click += btn_Add_Click;
             // 
             // btn_Search
             // 
@@ -175,9 +176,9 @@
             // 
             // groupBox1
             // 
-            groupBox1.Controls.Add(txt_ClName);
+            groupBox1.Controls.Add(txt_SYNotes);
             groupBox1.Controls.Add(label2);
-            groupBox1.Controls.Add(txt_ClCode);
+            groupBox1.Controls.Add(txt_SYCode);
             groupBox1.Controls.Add(label1);
             groupBox1.Location = new Point(12, 13);
             groupBox1.Name = "groupBox1";
@@ -186,13 +187,13 @@
             groupBox1.TabStop = false;
             groupBox1.Text = "بيانات الموسم الدراسي";
             // 
-            // txt_ClName
+            // txt_SYNotes
             // 
-            txt_ClName.Location = new Point(6, 29);
-            txt_ClName.Name = "txt_ClName";
-            txt_ClName.Size = new Size(259, 30);
-            txt_ClName.TabIndex = 3;
-            txt_ClName.TextChanged += txt_ClName_TextChanged;
+            txt_SYNotes.Location = new Point(6, 29);
+            txt_SYNotes.Name = "txt_SYNotes";
+            txt_SYNotes.Size = new Size(259, 30);
+            txt_SYNotes.TabIndex = 3;
+            txt_SYNotes.TextChanged += txt_ClName_TextChanged;
             // 
             // label2
             // 
@@ -205,12 +206,12 @@
             label2.Text = "ملاحظات:";
             label2.TextAlign = ContentAlignment.MiddleRight;
             // 
-            // txt_ClCode
+            // txt_SYCode
             // 
-            txt_ClCode.Location = new Point(352, 29);
-            txt_ClCode.Name = "txt_ClCode";
-            txt_ClCode.Size = new Size(122, 30);
-            txt_ClCode.TabIndex = 1;
+            txt_SYCode.Location = new Point(352, 29);
+            txt_SYCode.Name = "txt_SYCode";
+            txt_SYCode.Size = new Size(122, 30);
+            txt_SYCode.TabIndex = 1;
             // 
             // label1
             // 
@@ -263,9 +264,9 @@
         private DevExpress.XtraEditors.SimpleButton btn_Next;
         private DevExpress.XtraEditors.SimpleButton btn_Last;
         private GroupBox groupBox1;
-        private TextBox txt_ClName;
+        private TextBox txt_SYNotes;
         private Label label2;
-        private TextBox txt_ClCode;
+        private TextBox txt_SYCode;
         private Label label1;
     }
 }
