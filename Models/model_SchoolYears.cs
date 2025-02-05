@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace EduProfFiler.Models
 {
-    public class model_SchoolYear
+    public class model_SchoolYears
     {
         public string SY_Code { get; set; }
         public string SY_Notes { get; set; }

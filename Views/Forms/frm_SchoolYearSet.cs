@@ -12,7 +12,7 @@ using EduProfFiler.Views.Interfaces;
 
 namespace EduProfFiler.Views.Forms
 {
-    public partial class frm_SchoolYearSet : Form , ISchoolYear
+    public partial class frm_SchoolYearSet : Form, ISchoolYears
     {
         presenter_SchoolYear presenterSchoolYear;
 
@@ -25,11 +25,6 @@ namespace EduProfFiler.Views.Forms
             presenterSchoolYear = new presenter_SchoolYear(this);
         }
 
-        private void txt_ClName_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
         private void btn_Add_Click(object sender, EventArgs e)
         {
             bool isInserted = presenterSchoolYear.SchoolYearsInsert();
@@ -40,7 +35,50 @@ namespace EduProfFiler.Views.Forms
             else
             {
                 MessageBox.Show("حدث مشكل أثناء التسجيل");
-            }            
+            }
+        }
+
+        private void btn_Edit_Click(object sender, EventArgs e)
+        {
+            bool isSaved = presenterSchoolYear.SchoolYearsUpdate();
+            if (isSaved)
+            {
+                MessageBox.Show("لقد تم التعديل بنجاح");
+            }
+            else
+            {
+                MessageBox.Show("حدث مشكل أثناء التعديل");
+            }
+        }
+
+        private void btn_Delete_Click(object sender, EventArgs e)
+        {
+            bool isDeleted = presenterSchoolYear.SchoolYearsDelete();
+            if (isDeleted)
+            {
+                MessageBox.Show("لقد تم الحذف بنجاح");
+            }
+            else
+            {
+                MessageBox.Show("حدث مشكل أثناء الحذف");
+            }
+        }
+
+        private void btn_DeleteAll_Click(object sender, EventArgs e)
+        {
+            bool isDeletedAll = presenterSchoolYear.SchoolYearsDeleteAll();
+            if (isDeletedAll)
+            {
+                MessageBox.Show("لقد تم حذف كل البيانات");
+            }
+            else
+            {
+                MessageBox.Show("حدث مشكل أثناء الحذف");
+            }
+        }
+        private void btn_Clearfields_Click(object sender, EventArgs e)
+        {
+            presenterSchoolYear.SchoolYearsClearFields();
         }
     }
 }

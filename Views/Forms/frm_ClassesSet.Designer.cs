@@ -44,6 +44,8 @@
             btn_Next = new DevExpress.XtraEditors.SimpleButton();
             btn_Last = new DevExpress.XtraEditors.SimpleButton();
             groupBox3 = new GroupBox();
+            btn_Clearfields = new DevExpress.XtraEditors.SimpleButton();
+            btn_DeleteAll = new DevExpress.XtraEditors.SimpleButton();
             btn_Delete = new DevExpress.XtraEditors.SimpleButton();
             btn_Edit = new DevExpress.XtraEditors.SimpleButton();
             btn_Add = new DevExpress.XtraEditors.SimpleButton();
@@ -152,7 +154,7 @@
             groupBox2.Controls.Add(btn_Last);
             groupBox2.Location = new Point(13, 128);
             groupBox2.Name = "groupBox2";
-            groupBox2.Size = new Size(229, 84);
+            groupBox2.Size = new Size(190, 84);
             groupBox2.TabIndex = 8;
             groupBox2.TabStop = false;
             groupBox2.Text = "التنقل بين الأقسام";
@@ -161,100 +163,133 @@
             // 
             btn_First.ImageOptions.Location = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
             btn_First.ImageOptions.SvgImage = (DevExpress.Utils.Svg.SvgImage)resources.GetObject("btn_First.ImageOptions.SvgImage");
-            btn_First.Location = new Point(9, 31);
+            btn_First.Location = new Point(10, 31);
             btn_First.Name = "btn_First";
-            btn_First.Size = new Size(42, 35);
+            btn_First.Size = new Size(45, 35);
             btn_First.TabIndex = 3;
             // 
             // btn_Previous
             // 
             btn_Previous.ImageOptions.Location = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
             btn_Previous.ImageOptions.SvgImage = (DevExpress.Utils.Svg.SvgImage)resources.GetObject("btn_Previous.ImageOptions.SvgImage");
-            btn_Previous.Location = new Point(65, 31);
+            btn_Previous.Location = new Point(62, 31);
             btn_Previous.Name = "btn_Previous";
-            btn_Previous.Size = new Size(42, 35);
+            btn_Previous.Size = new Size(31, 35);
             btn_Previous.TabIndex = 2;
             // 
             // btn_Next
             // 
             btn_Next.ImageOptions.Location = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
             btn_Next.ImageOptions.SvgImage = (DevExpress.Utils.Svg.SvgImage)resources.GetObject("btn_Next.ImageOptions.SvgImage");
-            btn_Next.Location = new Point(121, 31);
+            btn_Next.Location = new Point(100, 31);
             btn_Next.Name = "btn_Next";
-            btn_Next.Size = new Size(42, 35);
+            btn_Next.Size = new Size(33, 35);
             btn_Next.TabIndex = 1;
             // 
             // btn_Last
             // 
             btn_Last.ImageOptions.Location = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
             btn_Last.ImageOptions.SvgImage = (DevExpress.Utils.Svg.SvgImage)resources.GetObject("btn_Last.ImageOptions.SvgImage");
-            btn_Last.Location = new Point(177, 31);
+            btn_Last.Location = new Point(140, 31);
             btn_Last.Name = "btn_Last";
-            btn_Last.Size = new Size(42, 35);
+            btn_Last.Size = new Size(39, 35);
             btn_Last.TabIndex = 0;
             // 
             // groupBox3
             // 
+            groupBox3.Controls.Add(btn_Clearfields);
+            groupBox3.Controls.Add(btn_DeleteAll);
             groupBox3.Controls.Add(btn_Delete);
             groupBox3.Controls.Add(btn_Edit);
             groupBox3.Controls.Add(btn_Add);
             groupBox3.Controls.Add(btn_Search);
-            groupBox3.Location = new Point(267, 128);
+            groupBox3.Location = new Point(209, 128);
             groupBox3.Name = "groupBox3";
-            groupBox3.Size = new Size(353, 84);
+            groupBox3.Size = new Size(411, 84);
             groupBox3.TabIndex = 9;
             groupBox3.TabStop = false;
             groupBox3.Text = "العمليات المتاحة";
             // 
+            // btn_Clearfields
+            // 
+            btn_Clearfields.Appearance.Font = new Font("Droid Arabic Kufi", 8.25F);
+            btn_Clearfields.Appearance.Options.UseFont = true;
+            btn_Clearfields.ImageOptions.Image = (Image)resources.GetObject("btn_Clearfields.ImageOptions.Image");
+            btn_Clearfields.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.RightCenter;
+            btn_Clearfields.ImageOptions.Location = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
+            btn_Clearfields.Location = new Point(8, 31);
+            btn_Clearfields.Name = "btn_Clearfields";
+            btn_Clearfields.Size = new Size(52, 35);
+            btn_Clearfields.TabIndex = 6;
+            btn_Clearfields.Text = "إفراغ";
+            btn_Clearfields.Click += btn_Clearfields_Click;
+            // 
+            // btn_DeleteAll
+            // 
+            btn_DeleteAll.Appearance.Font = new Font("Droid Arabic Kufi", 8.25F);
+            btn_DeleteAll.Appearance.Options.UseFont = true;
+            btn_DeleteAll.ImageOptions.Image = (Image)resources.GetObject("btn_DeleteAll.ImageOptions.Image");
+            btn_DeleteAll.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.RightCenter;
+            btn_DeleteAll.ImageOptions.Location = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
+            btn_DeleteAll.Location = new Point(68, 31);
+            btn_DeleteAll.Name = "btn_DeleteAll";
+            btn_DeleteAll.Size = new Size(84, 35);
+            btn_DeleteAll.TabIndex = 4;
+            btn_DeleteAll.Text = "حذف الكل";
+            btn_DeleteAll.Click += btn_DeleteAll_Click;
+            // 
             // btn_Delete
             // 
-            btn_Delete.Appearance.Font = new Font("Droid Arabic Kufi", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            btn_Delete.Appearance.Font = new Font("Droid Arabic Kufi", 8.25F);
             btn_Delete.Appearance.Options.UseFont = true;
+            btn_Delete.ImageOptions.Image = (Image)resources.GetObject("btn_Delete.ImageOptions.Image");
             btn_Delete.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.RightCenter;
             btn_Delete.ImageOptions.Location = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
-            btn_Delete.ImageOptions.SvgImage = (DevExpress.Utils.Svg.SvgImage)resources.GetObject("btn_Delete.ImageOptions.SvgImage");
-            btn_Delete.Location = new Point(6, 31);
+            btn_Delete.Location = new Point(160, 31);
             btn_Delete.Name = "btn_Delete";
-            btn_Delete.Size = new Size(74, 35);
+            btn_Delete.Size = new Size(53, 35);
             btn_Delete.TabIndex = 3;
             btn_Delete.Text = "حذف";
+            btn_Delete.Click += btn_Delete_Click;
             // 
             // btn_Edit
             // 
-            btn_Edit.Appearance.Font = new Font("Droid Arabic Kufi", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            btn_Edit.Appearance.Font = new Font("Droid Arabic Kufi", 8.25F);
             btn_Edit.Appearance.Options.UseFont = true;
+            btn_Edit.ImageOptions.Image = (Image)resources.GetObject("btn_Edit.ImageOptions.Image");
             btn_Edit.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.RightCenter;
             btn_Edit.ImageOptions.Location = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
-            btn_Edit.ImageOptions.SvgImage = (DevExpress.Utils.Svg.SvgImage)resources.GetObject("btn_Edit.ImageOptions.SvgImage");
-            btn_Edit.Location = new Point(91, 31);
+            btn_Edit.Location = new Point(221, 31);
             btn_Edit.Name = "btn_Edit";
-            btn_Edit.Size = new Size(74, 35);
+            btn_Edit.Size = new Size(58, 35);
             btn_Edit.TabIndex = 2;
             btn_Edit.Text = "تعديل";
+            btn_Edit.Click += btn_Edit_Click;
             // 
             // btn_Add
             // 
-            btn_Add.Appearance.Font = new Font("Droid Arabic Kufi", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            btn_Add.Appearance.Font = new Font("Droid Arabic Kufi", 8.25F);
             btn_Add.Appearance.Options.UseFont = true;
+            btn_Add.ImageOptions.Image = (Image)resources.GetObject("btn_Add.ImageOptions.Image");
             btn_Add.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.RightCenter;
             btn_Add.ImageOptions.Location = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
-            btn_Add.ImageOptions.SvgImage = (DevExpress.Utils.Svg.SvgImage)resources.GetObject("btn_Add.ImageOptions.SvgImage");
-            btn_Add.Location = new Point(176, 31);
+            btn_Add.Location = new Point(287, 31);
             btn_Add.Name = "btn_Add";
-            btn_Add.Size = new Size(74, 35);
+            btn_Add.Size = new Size(56, 35);
             btn_Add.TabIndex = 1;
             btn_Add.Text = "إضافة";
+            btn_Add.Click += btn_Add_Click;
             // 
             // btn_Search
             // 
-            btn_Search.Appearance.Font = new Font("Droid Arabic Kufi", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            btn_Search.Appearance.Font = new Font("Droid Arabic Kufi", 8.25F);
             btn_Search.Appearance.Options.UseFont = true;
+            btn_Search.ImageOptions.Image = (Image)resources.GetObject("btn_Search.ImageOptions.Image");
             btn_Search.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.RightCenter;
             btn_Search.ImageOptions.Location = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
-            btn_Search.ImageOptions.SvgImage = (DevExpress.Utils.Svg.SvgImage)resources.GetObject("btn_Search.ImageOptions.SvgImage");
-            btn_Search.Location = new Point(261, 31);
+            btn_Search.Location = new Point(351, 31);
             btn_Search.Name = "btn_Search";
-            btn_Search.Size = new Size(74, 35);
+            btn_Search.Size = new Size(49, 35);
             btn_Search.TabIndex = 0;
             btn_Search.Text = "بحث";
             // 
@@ -297,7 +332,6 @@
         private Label label2;
         private TextBox txt_ClCode;
         private Label label1;
-        private TextBox txt_SYCode;
         private Label label3;
         private TextBox txt_ClGrade;
         private Label label4;
@@ -312,5 +346,8 @@
         private DevExpress.XtraEditors.SimpleButton btn_Delete;
         private DevExpress.XtraEditors.SimpleButton btn_Edit;
         private DataGridView dataGridView1;
+        private TextBox txt_SYCode;
+        private DevExpress.XtraEditors.SimpleButton btn_DeleteAll;
+        private DevExpress.XtraEditors.SimpleButton btn_Clearfields;
     }
 }

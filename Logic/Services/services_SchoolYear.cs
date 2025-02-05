@@ -47,5 +47,17 @@ namespace EduProfFiler.Logic.Services
             command.Parameters.Add("SY_Code", SqlDbType.NVarChar, 50).Value = SY_Code;
             command.Parameters.Add("SY_Notes", SqlDbType.NVarChar, 250).Value = SY_Notes;
         }
+
+        // هذه دالة حذف كل التسجيلات
+        public static bool SchoolYears_DeleteAll()
+        {
+            return DB_Helper.executeData("SchoolYears_DeleteAll", () => schoolYear_AddParamDeleteAll());
+        }
+
+        // هذه الدالة لإضافة البارمترات الخاصة بأمر حذف تسجيل واحد
+        private static void schoolYear_AddParamDeleteAll()
+        {
+            
+        }
     }
 }

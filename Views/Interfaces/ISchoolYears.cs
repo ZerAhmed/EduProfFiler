@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace EduProfFiler.Views.Interfaces
 {
-    public interface ISchoolYear
+    public interface ISchoolYears
     {
         string SY_Code { get; set; }
         string SY_Notes { get; set; }
